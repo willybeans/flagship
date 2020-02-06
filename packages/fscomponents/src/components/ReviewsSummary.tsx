@@ -9,6 +9,7 @@ import {
 import { ReviewIndicator, ReviewIndicatorProps } from './ReviewIndicator';
 import { style as S } from '../styles/ReviewsSummary';
 import FSI18n, { translationKeys } from '@brandingbrand/fsi18n';
+const recommendKeys = translationKeys.flagship.reviews;
 
 export interface ReviewsSummaryProps {
   value: number;
@@ -50,7 +51,7 @@ export class ReviewsSummary extends Component<ReviewsSummaryProps> {
 
     const numberFormatting = { maximumFractionDigits: 1 };
     const reviewIndicatorCopy = reviewIndicatorSubtitle ? reviewIndicatorSubtitle :
-                    'based on ' + count + ' reviews';
+    FSI18n.string(recommendKeys.basedOn) + count + FSI18n.string(recommendKeys.reviews);
 
     return (
       <View style={[S.container, style]}>
@@ -71,7 +72,7 @@ export class ReviewsSummary extends Component<ReviewsSummaryProps> {
         {recommend && (
         <View style={[S.row, rowStyle]}>
           <Text style={[S.recommendStyle, recommendStyle]}>
-            {FSI18n.string(translationKeys.flagship.reviews.recommendCount, {
+            {FSI18n.string(recommendKeys.recommendCount, {
               recommendPercent: recommend
             })}
           </Text>

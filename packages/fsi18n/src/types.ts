@@ -202,6 +202,8 @@ export interface ReviewsTranslations<KeyType> {
   recommended: KeyType;
   notRecommended: KeyType;
   syndicatedLabel: KeyType;
+  basedOn: KeyType;
+  reviews: KeyType;
 }
 
 export interface SearchTranslations<KeyType> {

@@ -150,7 +150,9 @@ export const keys: FSTranslationKeys = {
       recommendCount: '{{recommendPercent}}% of respondents would recommend this to a friend',
       recommended: 'Yes, I recommend this product.',
       notRecommended: 'No, I do not reccommend this product.',
-      syndicatedLabel: 'Originally posted on {{site}}'
+      syndicatedLabel: 'Originally posted on {{site}}',
+      basedOn: 'based on ',
+      reviews: ' reviews'
     },
     search: {
       recentSearches: 'RECENT SEARCHES',
